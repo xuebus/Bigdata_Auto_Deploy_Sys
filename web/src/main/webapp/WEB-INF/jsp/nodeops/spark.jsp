@@ -71,8 +71,8 @@
                         <li class="divider"></li>
                         <li><a data-toggle="modal" href="#view_spark_${sparknode['id']}_modal"><i class="icon-search"></i>查看日志</a></li>
                         <li class="divider"></li>
-                        <li><a class="sparkOps" nodetype="master" clustertype="spark" ip="${sparknode['ip']}" opstype="start" href="#"><i class="icon-play"></i>启动slave</a></li>
-                        <li><a class="sparkOps" nodetype="master" clustertype="spark" ip="${sparknode['ip']}" opstype="stop" href="#"><i class="icon-stop"></i>停止slave</a></li>
+                        <li><a class="sparkOps" masterip="${masterip}" nodetype="slave" clustertype="spark" ip="${sparknode['ip']}" opstype="start" href="#"><i class="icon-play"></i>启动slave</a></li>
+                        <li><a class="sparkOps" masterip="${masterip}" nodetype="slave" clustertype="spark" ip="${sparknode['ip']}" opstype="stop" href="#"><i class="icon-stop"></i>停止slave</a></li>
                       </ul>
                     </div>
                   </c:if>
