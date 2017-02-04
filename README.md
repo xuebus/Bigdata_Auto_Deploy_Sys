@@ -39,7 +39,7 @@ sh install_web.sh
 执行sh install_agent.sh
 ```
 
-## 相关配置文件编辑方式
+## 相关配置文件格式
 
 ### 1、agent_node_list
 
