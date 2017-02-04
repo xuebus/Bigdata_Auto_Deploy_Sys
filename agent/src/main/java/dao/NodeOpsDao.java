@@ -106,7 +106,7 @@ public class NodeOpsDao {
     }
 
     public String stopSparkSlave() {
-        String stopSlaveScriptPath = sparkSbinHome + "/start-slave.sh";
+        String stopSlaveScriptPath = sparkSbinHome + "/stop-slave.sh";
         return this.execLinuxScripts(stopSlaveScriptPath, null);
     }
 

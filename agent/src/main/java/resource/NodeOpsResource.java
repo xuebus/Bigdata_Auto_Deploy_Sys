@@ -49,14 +49,11 @@ public class NodeOpsResource {
     @Path("/spark/startslave")
     @Produces(MediaType.APPLICATION_JSON)
     public Response startSparkSlave(@QueryParam("master") String master,
-                                    @QueryParam("port") String sparkMasterPort) {
+                                    @DefaultValue("7077") @QueryParam("port") String sparkMasterPort) {
         Response response = null;
         if(master.equals("") || master == null) {
             return new Response(Constants.ERR, "invalid master");
         }else {
-            if(sparkMasterPort.equals("") || sparkMasterPort == null) {
-                sparkMasterPort = System.getProperty("SPARK_MASTER_PORT");
-            }
             String res = new NodeOpsService().startSparkSlave(master, sparkMasterPort);
             if(res.equals("error")) {
                 response = new Response(Constants.ERR, "script exec error");
